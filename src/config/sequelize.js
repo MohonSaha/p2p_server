@@ -10,21 +10,12 @@ const sequelize = new Sequelize(
     dialect: "mysql",
     logging: false,
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
+      ssl: { require: true, rejectUnauthorized: false },
     },
-    pool: {
-      max: 5,
-      min: 0,
-      acquire: 30000,
-      idle: 10000,
-    },
+    pool: { max: 5, min: 0, idle: 10000, acquire: 30000 },
   }
 );
 
-// export Sequelize instance and models
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
