@@ -12,7 +12,7 @@ app.listen(PORT, async () => {
       `Server is alive on PORT:${PORT} in ${environment} environment`
     );
     // await db.Project.sync({ alter: true });
-    await db.sequelize.sync({ alter: true });
+    // await db.sequelize.sync({ alter: true });
 
     console.log(`Connected to the database successfully!`);
   } catch (err) {
