@@ -13,6 +13,8 @@ app.listen(PORT, async () => {
     );
     // await db.Project.sync({ alter: true });
     await db.sequelize.sync({ alter: true });
+
+    console.log(`Connected to the database successfully!`);
   } catch (err) {
     console.error("❌ Error during startup:", err);
     process.exit(1);

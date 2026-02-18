@@ -1,40 +1,10 @@
 const express = require("express");
 const apiRouter = express.Router();
-const authRouter = require("./auth.routes");
-const employeeRouter = require("./employee.routes");
-const taskRouter = require("./task.routes");
-const leaveRouter = require("./leave.routes");
-const projectRouter = require("./project.routes");
-const timeRouter = require("./time.routes");
-const { path } = require("../app");
+// const { path } = require("../app");
 const dailyCompletionRouter = require("./dailyCompletionRouter.routes");
 
 // Define your route configurations here
 const routers = [
-  {
-    path: "/auth",
-    router: authRouter,
-  },
-  {
-    path: "/employee",
-    router: employeeRouter,
-  },
-  {
-    path: "/task",
-    router: taskRouter,
-  },
-  {
-    path: "/leave",
-    router: leaveRouter,
-  },
-  {
-    path: "/project",
-    router: projectRouter,
-  },
-  {
-    path: "/time",
-    router: timeRouter,
-  },
   {
     path: "/daily-completion",
     router: dailyCompletionRouter,
